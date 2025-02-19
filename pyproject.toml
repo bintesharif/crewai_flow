@@ -1,20 +1,20 @@
 [project]
-name = "flow-crewai"
+name = "flow-langgraph"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "crewai>=0.100.1",
-    "litellm>=1.59.8",
+    "langgraph>=0.2.71",
+    "litellm>=1.61.3",
     "python-dotenv>=1.0.1",
-    "certifi>=2024.2.2",
 ]
 
 [project.scripts]
-flow-crewai = "flow_crewai:main"
-simple-flow = "flow_crewai.simple_flow:main"
-router_flow = "flow_crewai.router_flow:kickoff"
+flow-langgraph = "flow_langgraph:main"
+simple_flow = "flow_langgraph.simple_flow:run_simple_flow"
+promte_chaining_flow = "flow_langgraph.promte_chaining:run_promte_chaining_flow"
+router_flow = "flow_langgraph.router_flow:main"
 
 [build-system]
 requires = ["hatchling"]
