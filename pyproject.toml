@@ -1,0 +1,21 @@
+[project]
+name = "flow-crewai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "crewai>=0.100.1",
+    "litellm>=1.59.8",
+    "python-dotenv>=1.0.1",
+    "certifi>=2024.2.2",
+]
+
+[project.scripts]
+flow-crewai = "flow_crewai:main"
+simple-flow = "flow_crewai.simple_flow:main"
+router_flow = "flow_crewai.router_flow:kickoff"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
